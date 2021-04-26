@@ -5,6 +5,7 @@ subject: 'cat:cs.*'
 keywords:
 #         reinforcement learning: 3
         world model: 3
+        world models: 3
 #         internal world: 3
         
 # 通知の閾値
