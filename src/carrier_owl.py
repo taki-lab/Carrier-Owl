@@ -180,7 +180,7 @@ def main():
 #                            max_results=1000,
 #                            sort_by='submittedDate',
 #                            iterative=False)
-    articles = arxiv.query(query = 'cat:cs.* AND (ti:"world models" OR abs:"world+models"),
+    articles = arxiv.query(query = 'cat:cs.* AND (ti:"world models" OR abs:"world models")',
                             max_results = 10,
                             sort_by = 'submittedDate')
     results = search_keyword(articles, keywords, score_threshold)
