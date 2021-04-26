@@ -180,7 +180,7 @@ def main():
 #                            max_results=1000,
 #                            sort_by='submittedDate',
 #                            iterative=False)
-    articles = arxiv.query(query = f'cat:cs.* AND abs:reinforcement submittedDate:{day_before_yesterday_str}000000 TO {today_str}235959',
+    articles = arxiv.query(query = f'cat:cs.* AND abs:"reinforcement learning" submittedDate:{day_before_yesterday_str}000000 TO {today_str}235959',
                             max_results = 1000,
                             sort_by = 'submittedDate')
     results = search_keyword(articles, keywords, score_threshold)
