@@ -182,7 +182,7 @@ def main():
 #                            iterative=False)
     articles = arxiv.Search(query = "cat:cs.*+AND+%28ti:%22world+models%22+OR+abs:%22world+models%22%29",
                             max_results = 10,
-                            sort_by = arxiv.SortCriterion.SubmittedDate)
+                            sort_by = 'submittedDate')
     results = search_keyword(articles, keywords, score_threshold)
 
     slack_id = os.getenv("SLACK_ID") or args.slack_id
