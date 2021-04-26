@@ -176,10 +176,13 @@ def main():
 #                   f'(ti:world models OR abs:world models) ' \
 #                   f'submittedDate:' \
 #                   f'[{day_before_yesterday_str}000000 TO {today_str}235959]'
-    articles = arxiv.query(query=arxiv_query,
-                           max_results=1000,
-                           sort_by='submittedDate',
-                           iterative=False)
+#     articles = arxiv.query(query=arxiv_query,
+#                            max_results=1000,
+#                            sort_by='submittedDate',
+#                            iterative=False)
+    articles = arxiv.Search(query = "cat:cs.*+AND+%28ti:%22world+models%22+OR+abs:%22world+models%22%29",
+                            max_results = 10,
+                            sort_by = arxiv.SortCriterion.SubmittedDate)
     results = search_keyword(articles, keywords, score_threshold)
 
     slack_id = os.getenv("SLACK_ID") or args.slack_id
