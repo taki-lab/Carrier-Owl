@@ -171,10 +171,11 @@ def main():
     today_str = datetime.datetime.today().strftime('%Y%m%d')
     day_before_yesterday_str = day_before_yesterday.strftime('%Y%m%d')
     # datetime format YYYYMMDDHHMMSS
-    arxiv_query = f'cat:cs.* AND ' \
-                  f'(ti:world models OR abs:world models) ' \
-                  f'submittedDate:' \
-                  f'[{day_before_yesterday_str}000000 TO {today_str}235959]'
+    arxiv_query = "cat:cs.*+AND+%28ti:%22world+models%22+OR+abs:%22world+models%22%29"
+#     arxiv_query = f'cat:cs.* AND ' \
+#                   f'(ti:world models OR abs:world models) ' \
+#                   f'submittedDate:' \
+#                   f'[{day_before_yesterday_str}000000 TO {today_str}235959]'
     articles = arxiv.query(query=arxiv_query,
                            max_results=1000,
                            sort_by='submittedDate',
