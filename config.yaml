@@ -6,12 +6,6 @@ keywords:
         reinforcement learning: 3
         world model: 3
         internal world: 3
-        model-free: 3
-        model based: 3
-        action value: 3
-        state value: 3
         
-        
-
 # 通知の閾値
 score_threshold: 3
