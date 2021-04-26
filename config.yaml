@@ -3,10 +3,8 @@ subject: 'cat:cs.*'
 
 # 検索キーワード
 keywords:
-#         reinforcement learning: 3
+        reinforcement learning: 3
         world model: 3
-        world models: 3
-#         internal world: 3
         
 # 通知の閾値
-score_threshold: 3
+score_threshold: 6
