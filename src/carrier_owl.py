@@ -167,7 +167,7 @@ def main():
     keywords = config['keywords']
     score_threshold = float(config['score_threshold'])
 
-    day_before_yesterday = datetime.datetime.today() - datetime.timedelta(days=60)
+    day_before_yesterday = datetime.datetime.today() - datetime.timedelta(days=6)
     today_str = datetime.datetime.today().strftime('%Y%m%d')
     day_before_yesterday_str = day_before_yesterday.strftime('%Y%m%d')
     # datetime format YYYYMMDDHHMMSS
@@ -180,7 +180,7 @@ def main():
 #                            max_results=1000,
 #                            sort_by='submittedDate',
 #                            iterative=False)
-    articles = arxiv.query(query = f'cat:cs.* AND abs:"reinforcement learning" submittedDate:{day_before_yesterday_str}000000 TO {today_str}235959',
+    articles = arxiv.query(query = f'cat:cs.* AND abs:"reinforcement learning" submittedDate:{day_before_yesterday_str}000000 TO {day_before_yesterday_str}235959',
                             max_results = 1000,
                             sort_by = 'submittedDate')
     results = search_keyword(articles, keywords, score_threshold)
