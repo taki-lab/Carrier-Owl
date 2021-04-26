@@ -7,4 +7,4 @@ keywords:
         world model: 3
         
 # 通知の閾値
-score_threshold: 6
+score_threshold: 3
