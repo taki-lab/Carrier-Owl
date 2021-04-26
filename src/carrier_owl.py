@@ -168,11 +168,12 @@ def main():
     score_threshold = float(config['score_threshold'])
 
     day_before_yesterday = datetime.datetime.today() - datetime.timedelta(days=10)
+    today_str = datetime.datetime.today().strftime('%Y%m%d')
     day_before_yesterday_str = day_before_yesterday.strftime('%Y%m%d')
     # datetime format YYYYMMDDHHMMSS
     arxiv_query = f'({subject}) AND ' \
                   f'submittedDate:' \
-                  f'[{day_before_yesterday_str}000000 TO {datetime.datetime.today().strftime('%Y%m%d')}235959]'
+                  f'[{day_before_yesterday_str}000000 TO {today_str}235959]'
     articles = arxiv.query(query=arxiv_query,
                            max_results=1000,
                            sort_by='submittedDate',
