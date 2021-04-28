@@ -180,7 +180,7 @@ def main():
 #                            max_results=1000,
 #                            sort_by='submittedDate',
 #                            iterative=False)
-    articles = arxiv.query(query = f'cat:cs.* AND abs:"reinforcement learning" AND submittedDate:[{day_before_yesterday_str}000000 TO {day_before_yesterday_str}235959]', sort_by = 'submittedDate')
+    articles = arxiv.query(query='cat:cs.* AND abs:"reinforcement learning" AND abs:dream')
     results = search_keyword(articles, keywords, score_threshold)
 
     slack_id = os.getenv("SLACK_ID") or args.slack_id
