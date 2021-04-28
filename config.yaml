@@ -4,8 +4,8 @@ subject: 'cat:cs.*'
 # 検索キーワード
 keywords:
         reinforcement learning: 3
-#         world model: 3
-        dream: 3
+        world model: 3
+        dream: 2
         
 # 通知の閾値
-score_threshold: 6
+score_threshold: 3
