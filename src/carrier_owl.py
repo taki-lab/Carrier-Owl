@@ -167,7 +167,7 @@ def main():
     keywords = config['keywords']
     score_threshold = float(config['score_threshold'])
 
-    day_before_yesterday = datetime.datetime.today() - datetime.timedelta(days=9)
+    day_before_yesterday = datetime.datetime.today() - datetime.timedelta(days=8)
 #     today_str = datetime.datetime.today().strftime('%Y%m%d')
     day_before_yesterday_str = day_before_yesterday.strftime('%Y%m%d')
     # datetime format YYYYMMDDHHMMSS
