@@ -167,8 +167,8 @@ def main():
     keywords = config['keywords']
     score_threshold = float(config['score_threshold'])
 
-    day_before_yesterday = datetime.datetime.today() - datetime.timedelta(days=6)
-    today_str = datetime.datetime.today().strftime('%Y%m%d')
+    day_before_yesterday = datetime.datetime.today() - datetime.timedelta(days=11)
+#     today_str = datetime.datetime.today().strftime('%Y%m%d')
     day_before_yesterday_str = day_before_yesterday.strftime('%Y%m%d')
     # datetime format YYYYMMDDHHMMSS
 #     arxiv_query = "cat:cs.*+AND+%28ti:%22world+models%22+OR+abs:%22world+models%22%29"
